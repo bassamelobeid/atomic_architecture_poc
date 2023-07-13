@@ -3,11 +3,8 @@ import 'package:atomic_architecture_poc/features/list/presentation/atoms/deriv_t
 import 'package:flutter/material.dart';
 
 class DerivAppBar extends StatelessWidget {
-
   final Function(String) onChanged;
-
   const DerivAppBar({super.key, required this.onChanged});
-
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(

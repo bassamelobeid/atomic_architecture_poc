@@ -16,13 +16,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: FoundationColors.appBarBackground, // Use the foundation color
         scaffoldBackgroundColor: FoundationColors.cardBackground, // Use the foundation color
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           titleLarge: TextStyle(
             color: FoundationColors.textPrimary, // Use the foundation color
           ),
         ),
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
