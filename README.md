@@ -1,16 +1,30 @@
-# atomic_architecture_poc
+# Atomic Architecture for Presentation Layer
 
-A new Flutter project.
+## What?
 
-## Getting Started
+<b> We’re not creating pages, we’re creating systems of components. </b>
 
-This project is a starting point for a Flutter application.
+It's a way to organize our widgets in a way that we can reuse them, and is not huge chunk of build method.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Why?
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Soon we will have another app where we might want to resuse some of the already created widgets. 
+- We all have seen instances of code where we use helper methods which results in huge build method due to which it rebuilds everything on every state change. This affects performance, we should use small widgets instead of helper methods. Following atomic architecture will help us keep our widgets separated into different components.
+- It makes widget testing easier.
+
+## How?
+
+Following is the way we can organize our widgets in atomic architecture.
+
+### Tokens
+### Foundations
+
+### Atoms
+### Molecules
+### Organisms
+### Templates
+### Pages
+
+
+
