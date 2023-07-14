@@ -6,9 +6,17 @@
 
 It's a way to organize our widgets in a way that we can reuse them, and is not huge chunk of build method.
 
+<img src = "assets/atomic.png">
+
+- atoms = widgets
+- molecules = group of widgets
+- organisms = group of molecules
+- templates = a page with dummy data
+- page = a page with dynamic data
 
 ## Why?
 
+- Design team is creating a design system following atomic design. We should use it to maintain consistency in our UI.
 - Soon we will have another app where we might want to resuse some of the already created widgets. 
 - We all have seen instances of code where we use helper methods which results in huge build method due to which it rebuilds everything on every state change. This affects performance, we should use small widgets instead of helper methods. Following atomic architecture will help us keep our widgets separated into different components.
 - It makes widget testing easier.
