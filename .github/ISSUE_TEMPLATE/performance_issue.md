@@ -1,7 +1,7 @@
 ---
-name: Performance Issue
+name: ⚡ Performance Issue
 about: Report a performance problem or bottleneck in our packages
-title: '[Performance][Package Name] Brief description of the issue'
+title: '⚡ [Performance][Package Name] Brief description of the issue'
 labels: 'performance'
 assignees: ''
 

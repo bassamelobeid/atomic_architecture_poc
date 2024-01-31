@@ -1,7 +1,7 @@
 ---
-name: Feature Request
+name: 🚀 Feature Request
 about: Suggest a new feature or a new package
-title: '[Feature/Package] Short description'
+title: '🚀 [Feature/Package] Short description'
 labels: 'enhancement'
 assignees: ''
 

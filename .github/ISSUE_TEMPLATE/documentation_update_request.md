@@ -1,7 +1,7 @@
 ---
-name: Documentation Update Request
+name: 📚 Documentation Update Request
 about: Suggest improvements or report issues in the documentation
-title: '[Docs][Package Name] Summary of the request'
+title: '📚 [Docs][Package Name] Summary of the request'
 labels: 'documentation'
 assignees: ''
 

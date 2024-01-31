@@ -1,7 +1,7 @@
 ---
-name: Bug Report
+name: ⚠️ Bug Report
 about: Create a report to help us improve our packages, including regressions
-title: '[Package Name] - Brief description of the issue'
+title: '⚠️ [Package Name] - Brief description of the issue'
 labels: 'bug'
 assignees: ''
 
