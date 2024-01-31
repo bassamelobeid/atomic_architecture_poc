@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Create a report to help us improve our packages
+about: Create a report to help us improve our packages, including regressions
 title: '[Package Name] - Brief description of the issue'
 labels: 'bug'
 assignees: ''
@@ -12,6 +12,15 @@ assignees: ''
 - [ ] Have you checked that this issue hasn't been already reported?
 - [ ] Are you using the latest version of our package?
 - [ ] Have you checked the documentation for this feature/issue?
+
+### Issue Type
+
+- [ ] General Bug
+- [ ] Regression
+
+If this is a regression, please provide:
+- Previous package version where the feature worked:
+- Current package version where the regression occurs:
 
 ### Package Version and Flutter Environment
 
@@ -27,7 +36,7 @@ assignees: ''
 
 ### Description
 
-Briefly describe the issue you are experiencing. Include any error messages or screenshots that can help understand the problem.
+Briefly describe the issue you are experiencing. Include any error messages or screenshots that can help understand the problem. For regressions, describe what functionality is affected and how the behavior has changed from previous versions.
 
 ### Steps to Reproduce
 
@@ -37,11 +46,11 @@ Briefly describe the issue you are experiencing. Include any error messages or s
 
 ### Expected Behavior
 
-What did you expect to happen?
+What did you expect to happen? For regressions, describe what the correct behavior should be, as it was in the previous working versions.
 
 ### Actual Behavior
 
-What actually happened?
+What actually happened? Explain the current behavior that you consider a bug or a regression.
 
 ### Code Snippet
 
