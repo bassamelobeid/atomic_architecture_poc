@@ -1,9 +1,11 @@
+
 ---
 name: Bug Report
 about: Create a report to help us improve our packages
 title: '[Package Name] - Brief description of the issue'
 labels: 'bug'
 assignees: ''
+
 ---
 
 ### Prerequisites
@@ -42,7 +44,7 @@ What did you expect to happen?
 
 What actually happened?
 
-### Code Snippet or Repository Link
+### Code Snippet
 
 ```dart
 // If possible, please provide a code snippet that demonstrates the issue.
