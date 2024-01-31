@@ -1,54 +1,38 @@
-
 ---
-name: Bug Report
-about: Create a report to help us improve our packages
-title: '[BUG] Brief description of the issue'
-labels: 'bug'
+name: Bug report
+about: Create a report to help us improve
+title: ''
+labels: ''
 assignees: ''
 
 ---
 
-### Prerequisites
+**Describe the bug**
+A clear and concise description of what the bug is.
 
-- [ ] Have you checked that this issue hasn't been already reported?
-- [ ] Are you using the latest version of our package?
-- [ ] Have you checked the documentation for this feature/issue?
+**To Reproduce**
+Steps to reproduce the behavior:
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
 
-### Package Version and Flutter Environment
+**Expected behavior**
+A clear and concise description of what you expected to happen.
 
-- Package Version: 
-- Flutter (Output of `flutter doctor`):
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
 
-### Description
+**Desktop (please complete the following information):**
+ - OS: [e.g. iOS]
+ - Browser [e.g. chrome, safari]
+ - Version [e.g. 22]
 
-Briefly describe the issue you are experiencing. Include any error messages or screenshots that can help understand the problem.
+**Smartphone (please complete the following information):**
+ - Device: [e.g. iPhone6]
+ - OS: [e.g. iOS8.1]
+ - Browser [e.g. stock browser, safari]
+ - Version [e.g. 22]
 
-### Steps to Reproduce
-
-1. Step one to reproduce
-2. Step two...
-3. (and so on)
-
-### Expected Behavior
-
-What did you expect to happen?
-
-### Actual Behavior
-
-What actually happened?
-
-### Code Snippet or Repository Link
-
-```dart
-// If possible, please provide a code snippet that demonstrates the issue.
-```
-
-### Can this issue be consistently reproduced?
-
-- [ ] Yes
-- [ ] No
-- [ ] Not applicable
-
-### Additional Information
-
-Any additional information, configuration, or data that might be necessary to reproduce the issue.
+**Additional context**
+Add any other context about the problem here.
