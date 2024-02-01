@@ -24,10 +24,10 @@ jobs:
         run: |
           curl -X POST -H 'Content-type: application/json' \
           --data '{
-          "issue_creator": "$ISSUE_CREATOR",
-          "issue_title": "$ISSUE_TITLE",
-          "issue_url": "$ISSUE_URL",
-          "issue_labels": "$ISSUE_LABELS"
+          "issue_creator": ${{ ISSUE_CREATOR }},
+          "issue_title": ${{ ISSUE_TITLE }},
+          "issue_url": ${{ ISSUE_URL }},
+          "issue_labels": ${{ ISSUE_LABEL }}"
           }' \
             "https://hooks.slack.com/triggers/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"
         shell: bash
