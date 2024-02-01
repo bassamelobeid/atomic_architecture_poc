@@ -1,4 +1,4 @@
-name: version
+name: issue_created
 
 on:
   issues:
@@ -8,11 +8,39 @@ jobs:
   version_and_tag:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup jq
+        run: sudo apt-get install jq
+
       - name: Send Slack Notification on Package Update
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_LABELS: ${{ toJson(github.event.issue.labels.*.name) }}
+          SLACK_WEBHOOK_URL: "https://hooks.slack.com/triggers/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"
         run: |
-          curl -X POST -H 'Content-type: application/json' \
-          --data '{
-            "message": "A new issue has been raised in flutter deriv packages."
-          }' \
-            "https://hooks.slack.com/triggers/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"
+          LABELS=$(echo $ISSUE_LABELS | jq -r '. | join(", ")')
+          PAYLOAD=$(cat <<EOF
+          {
+            "blocks": [
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*A new issue has been raised in Flutter Deriv packages:* $ISSUE_TITLE"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*Labels:* $LABELS"
+                }
+              }
+            ]
+          }
+          EOF
+          )
+          curl -X POST -H 'Content-type: application/json' --data "$PAYLOAD" $SLACK_WEBHOOK_URL
         shell: bash
