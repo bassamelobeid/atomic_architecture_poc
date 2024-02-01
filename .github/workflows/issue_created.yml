@@ -16,18 +16,14 @@ jobs:
 
       - name: Send Slack Notification on Package Update
         env:
-          ISSUE_TITLE: ${{ github.event.issue.title }}
-          ISSUE_LABELS: ${{ toJson(github.event.issue.labels.*.name) }}
-          ISSUE_CREATOR: ${{ github.event.issue.user.login }}
-          ISSUE_URL: ${{ github.event.issue.html_url }}
           SLACK_WEBHOOK_URL: "https://hooks.slack.com/triggers/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"
         run: |
           curl -X POST -H 'Content-type: application/json' \
           --data '{
-          "issue_creator": "${{ ISSUE_CREATOR }}",
-          "issue_title": "${{ ISSUE_TITLE }}",
-          "issue_url": "${{ ISSUE_URL }}",
-          "issue_labels": "${{ ISSUE_LABEL }}""
+          "issue_creator": "${{ github.event.issue.user.login }}",
+          "issue_title": "${{ github.event.issue.title }}",
+          "issue_url": "${{ github.event.issue.html_url }}",
+          "issue_labels": "${{ toJson(github.event.issue.labels.*.name) }}""
           }' \
             "https://hooks.slack.com/triggers/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"
         shell: bash
