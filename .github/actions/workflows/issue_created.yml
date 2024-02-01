@@ -1,0 +1,16 @@
+name: version
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  version_and_tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Slack Notification
+        uses: ./.github/actions/send_slack_notifications
+        if: ${{ contains(steps.push-tag.outputs.PUSH_OUTPUT, 'Packages updated') }}
+        with:
+          SLACK_WEBHOOK_URL: "https://hooks.slack.com/triggers/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"
+          MESSAGE: "Github Issue Created"

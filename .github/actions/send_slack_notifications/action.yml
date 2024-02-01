@@ -1,0 +1,35 @@
+name: send_slack_notifications
+description: Send Slack notifications
+inputs:
+  SLACK_WEBHOOK_URL:
+    description: "Slack webhook URL"
+    required: true
+  MESSAGE:
+    description: "Message"
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Send Slack Notification on Package Update
+      run: |
+        curl -X POST -H 'Content-type: application/json' \
+        --data '{
+        	"blocks": [
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "<!channel> *New Package Update*"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": ${{ inputs.MESSAGE }}
+              }
+            }
+          ]
+        }' \
+          ${{ inputs.SLACK_WEBHOOK_URL }}
+      shell: bash
