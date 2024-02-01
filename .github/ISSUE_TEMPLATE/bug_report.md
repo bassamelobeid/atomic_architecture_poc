@@ -7,11 +7,11 @@ assignees: ''
 
 ---
 
-### Prerequisites
+### Prerequisites to Check
 
-- [ ] Have you checked that this issue hasn't been already reported?
-- [ ] Are you using the latest version of our package?
-- [ ] Have you checked the documentation for this feature/issue?
+- Have you checked that this issue hasn't been already reported?
+- Are you using the latest version of our package?
+- Have you checked the documentation for this feature/issue?
 
 ### Issue Type
 
