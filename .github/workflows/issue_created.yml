@@ -24,7 +24,7 @@ jobs:
           "issue_creator": "${{ github.event.issue.user.login }}",
           "issue_title": "${{ github.event.issue.title }}",
           "issue_url": "${{ github.event.issue.html_url }}",
-          "issue_labels": $LABELS
+          "issue_labels": "${{ LABELS }}"
           }' \
             "https://hooks.slack.com/triggers/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"
         shell: bash
